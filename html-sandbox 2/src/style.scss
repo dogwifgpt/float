@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    position: relative;
+    width: 375px; /* Phone width */
+    height: 667px; /* Phone height */
+    overflow: hidden;
+    background: url('https://cdn.discordapp.com/attachments/895233277114351627/1251409352166867105/Untitled_design_37.png?ex=666e7947&is=666d27c7&hm=b8a78d15f38563a2d0673a0293f37d324de03b1add4c30d2eb4d895ba86ab469&') repeat-y center top;
+    background-size: cover;
+    animation: scroll-background 10s linear infinite;
+}
+
+@keyframes scroll-background {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 667px; /* Adjust based on the height of the container */
+    }
+}
+
+#player {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn.discordapp.com/attachments/895233277114351627/1251404888215388241/Untitled_design_31.png?ex=666e751f&is=666d239f&hm=100b82ce84664f52fd91d9d5e894e0c42e719cc18bb65985922710459ee7a053&') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, 50%);
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+#start-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-align: center;
+    display: none;
+}
